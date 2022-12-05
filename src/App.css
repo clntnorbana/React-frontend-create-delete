@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+:root {
+  --dark: #1f1f1f;
+  --light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* navbar */
+nav {
+  background-color: var(--dark);
+  height: 80px;
+  color: var(--light);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+nav .title {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+nav .btn-create {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-transform: capitalize;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: #d4cfcf;
+  transition: ease 0.4s;
+  font-weight: bold;
+}
+
+nav .btn-create:hover {
+  background-color: #bdb9b9;
+  transition: ease 0.4s;
+}
+
+/* create form */
+form {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+  background-color: var(--light);
+  padding: 20px;
+  box-shadow: 0 50px 50rem 50rem rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+form h3 {
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-size: 1.5em;
+}
+
+form input {
+  padding: 7px;
+  margin: 3px 0;
+}
+
+form input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  background-color: var(--dark);
+  color: var(--light);
+  font-weight: bold;
+  padding: 7px 0;
+  margin: 10px 0;
+}
+
+form .btn-close {
+  position: absolute;
+  top: -2%;
+  right: -7%;
+  font-size: 2em;
+  cursor: pointer;
+  color: var(--light);
+}
+
+form .error {
+  color: rgb(241, 44, 77);
+  background-color: rgb(189, 177, 177);
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* users */
+.users {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.user {
+  background-color: #e3d9d9;
+  margin: 10px 8px;
+  padding: 10px;
+  position: relative;
+}
+
+.delete {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgb(235, 28, 28);
+}
+
+.delete:hover {
+  color: rgb(217, 117, 117);
+}
